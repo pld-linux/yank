@@ -87,8 +87,8 @@ rm -f aux/missing
 libtoolize --copy --force
 gettextize --copy --force
 aclocal
-autoconf
-automake -a -c -f
+%{__autoconf}
+%{__automake}
 
 CFLAGS="%{rpmcflags}"
 %configure \
