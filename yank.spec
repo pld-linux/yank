@@ -10,8 +10,11 @@ Group(pl):	X11/Aplikacje
 Source0:	ftp://yank.sourceforge.net/pub/yank/%{name}-%{version}.tar.bz2
 Patch0:		yank-plugun_dir.patch
 URL:		http://yank.sourceforge.net/
-BuildRequires:	gdk-pixbuf-devel
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool
 BuildRequires:	gettext-devel
+BuildRequires:	gdk-pixbuf-devel
 BuildRequires:	gnome-libs-devel
 BuildRequires:	gnome-print-devel >= 0.28
 BuildRequires:	libxml-devel
@@ -26,6 +29,10 @@ gtk libraries. It feels stable and usable enough to be released to the
 public but it surely lacks some (not so important) features which
 might be added later. Excessive tests have shown that yank is
 fool-proof, irritating and wasting too much memory.
+
+%description -l pl
+Yank jest prostym notatnikiem i menad¿erem listy rzeczy do zrobienia,
+u¿ywaj±cym bibliotek GNOME i gtk+.
 
 %prep
 %setup -q
