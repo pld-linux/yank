@@ -10,7 +10,7 @@ Source0:	ftp://yank.sourceforge.net/pub/yank/%{name}-%{version}.tar.bz2
 URL:		http://yank.sourceforge.net/
 BuildRequires:	gettext-devel
 BuildRequires:	gnome-libs-devel
-BuildRequires:	gnome-print-devel >= 0.17
+BuildRequires:	gnome-print-devel >= 0.20
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
