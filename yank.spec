@@ -13,7 +13,7 @@ URL:		http://yank.sourceforge.net/
 BuildRequires:	GConf-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	freetype-devel
+BuildRequires:	freetype-devel >= 2.0.0
 BuildRequires:	gal-devel >= 0.19
 BuildRequires:	gdk-pixbuf-devel
 BuildRequires:	gettext-devel
