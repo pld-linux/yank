@@ -1,0 +1,52 @@
+diff -Nru yank-0.2.0/src/Plugins/Palm/Makefile.am yank-0.2.0.new/src/Plugins/Palm/Makefile.am
+--- yank-0.2.0/src/Plugins/Palm/Makefile.am	Wed Jan 24 22:24:06 2001
++++ yank-0.2.0.new/src/Plugins/Palm/Makefile.am	Sat Feb 10 09:13:48 2001
+@@ -17,7 +17,7 @@
+ # 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+ #
+ 
+-plugindir = $(libdir)/$(PACKAGE)/plugins/$(VERSION)
++plugindir = $(libdir)/$(PACKAGE)/
+ 
+ plugin_LTLIBRARIES = libpalm.la
+ 
+diff -Nru yank-0.2.0/src/Plugins/Pgp5/Makefile.am yank-0.2.0.new/src/Plugins/Pgp5/Makefile.am
+--- yank-0.2.0/src/Plugins/Pgp5/Makefile.am	Wed Jan 24 22:20:59 2001
++++ yank-0.2.0.new/src/Plugins/Pgp5/Makefile.am	Sat Feb 10 09:13:35 2001
+@@ -17,7 +17,7 @@
+ # 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+ #
+ 
+-plugindir = $(libdir)/$(PACKAGE)/plugins/$(VERSION)
++plugindir = $(libdir)/$(PACKAGE)/
+ 
+ plugin_LTLIBRARIES = libPgp5.la
+ 
+diff -Nru yank-0.2.0/src/plugin.c yank-0.2.0.new/src/plugin.c
+--- yank-0.2.0/src/plugin.c	Wed Jan 24 20:26:51 2001
++++ yank-0.2.0.new/src/plugin.c	Sat Feb 10 09:16:34 2001
+@@ -95,22 +95,15 @@
+         }
+     }
+     
+-    /*
+-     * FIXME: use a PATH-entry from preferences here
+-     */
+-
+-    plugin_read_dir("./Plugins/Palm/.libs/");
+-    plugin_read_dir("./Plugins/Pgp5/.libs/");
+-    
+     home = g_get_home_dir();
+     if (home)
+     {
+-        dir = g_strdup_printf("%s/.%s/plugins/%s/", home, PACKAGE, VERSION);
++        dir = g_strdup_printf("%s/.%s/plugins/", home, PACKAGE);
+         plugin_read_dir(dir);
+         g_free(dir);
+     }
+     
+-    dir = gnome_unconditional_libdir_file(PACKAGE "/plugins/" VERSION "/");
++    dir = gnome_unconditional_libdir_file(PACKAGE);
+     plugin_read_dir(dir);
+     g_free(dir);    
+ }
