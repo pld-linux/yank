@@ -1,0 +1,18 @@
+diff -urN yank-0.2.1.orig/src/Plugins/GtkSpell/gtkspell.c yank-0.2.1/src/Plugins/GtkSpell/gtkspell.c
+--- yank-0.2.1.orig/src/Plugins/GtkSpell/gtkspell.c	Sat Mar 10 18:02:46 2001
++++ yank-0.2.1/src/Plugins/GtkSpell/gtkspell.c	Tue Nov 27 18:37:02 2001
+@@ -466,11 +466,11 @@
+ 			do {
+ 				if (l->data == NULL && l->next != NULL) {
+ 					count = 0;
+-					curmenu = gtk_menu_new();
+ 					item = gtk_menu_item_new_with_label("Other Possibilities...");
+-					gtk_widget_show(item);
+-					gtk_menu_item_set_submenu(GTK_MENU_ITEM(item), curmenu);
+ 					gtk_menu_append(GTK_MENU(curmenu), item);
++					curmenu = gtk_menu_new();
++					gtk_menu_item_set_submenu(GTK_MENU_ITEM(item), curmenu);
++					gtk_widget_show(item);
+ 					l = l->next;
+ 				} else if (count > MENUCOUNT) {
+ 					count -= MENUCOUNT;
