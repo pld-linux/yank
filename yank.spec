@@ -2,7 +2,7 @@ Summary:	Yet another note-keeper (GNOME)
 Summary(pl):	Jeszcze jeden notatnik
 Name:		yank
 Version:	0.2.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications
 Group(de):	X11/Applikationen
@@ -16,7 +16,7 @@ BuildRequires:	GConf-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	freetype-devel
-BuildRequires:	gal-devel
+BuildRequires:	gal-devel >= 0.19
 BuildRequires:	gdk-pixbuf-devel
 BuildRequires:	gettext-devel
 BuildRequires:	gnome-libs-devel
