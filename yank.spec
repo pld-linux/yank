@@ -21,7 +21,6 @@ BuildRequires:	gettext-devel
 BuildRequires:	gnome-libs-devel
 BuildRequires:	gnome-print-devel >= 0.28
 BuildRequires:	gtk+-devel
-BuildRequires:	ispell
 BuildRequires:	libglade-devel
 BuildRequires:	libtool
 BuildRequires:	libxml-devel
