@@ -44,7 +44,7 @@ list± zadañ, korzystaj±cym z bibliotek GNOME i gtk+.
 
 %package gpg
 Summary:	GPG plugin
-Summary(pl):	Wtyczka GPG.
+Summary(pl):	Wtyczka GPG
 Group:		X11/Applications
 Requires:	%{name} = %{version}
 
@@ -56,7 +56,7 @@ Wtyczka GPG.
 
 %package pgp5
 Summary:	PGP5 plugin
-Summary(pl):	Wtyczka PGP5.
+Summary(pl):	Wtyczka PGP5
 Group:		X11/Applications
 Requires:	%{name} = %{version}
 
@@ -68,7 +68,7 @@ Wtyczka PGP5.
 
 %package gtkspell
 Summary:	Spellchecker plugin
-Summary(pl):	Wtyczka sprawdzaj±ca pisowniê.
+Summary(pl):	Wtyczka sprawdzaj±ca pisowniê
 Group:		X11/Applications
 Requires:	%{name} = %{version}
 
