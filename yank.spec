@@ -1,7 +1,7 @@
 Summary:	yet another note-keeper (GNOME)
 Name:		yank
 Version:	0.1.5
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications
 Group(de):	X11/Applikationen
@@ -9,6 +9,8 @@ Group(pl):	X11/Aplikacje
 Source0:	ftp://yank.sourceforge.net/pub/yank/%{name}-%{version}.tar.bz2
 URL:		http://yank.sourceforge.net/
 BuildRequires:	gettext-devel
+BuildRequires:	gnome-libs-devel
+BuildRequires:	gnome-print-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
