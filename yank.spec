@@ -10,6 +10,7 @@ Group(pl):	X11/Aplikacje
 Source0:	http://download.sourceforge.net/yank/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-gconf_install.patch
 Patch1:		%{name}-gtkspell_menu.patch
+Patch2:		%{name}-build_spell_pligin_conditionaly.patch
 URL:		http://yank.sourceforge.net/
 BuildRequires:	GConf-devel
 BuildRequires:	autoconf
@@ -81,6 +82,7 @@ Wtyczka sprawdzaj±ca pisowniê.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 rm -f aux/missing
@@ -90,10 +92,9 @@ aclocal
 autoconf
 automake -a -c
 
-CFLAGS="%{!?debug:$RPM_OPT_FLAGS}%{?debug:-O -g}"
-export CFLAGS
-
+CFLAGS="%{rpmcflags}"
 %configure \
+	--enable-spell-plugin \
 	--disable-static
 %{__make}
 
