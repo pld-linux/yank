@@ -1,6 +1,19 @@
+diff -urN yank-0.2.1.orig/ChangeLog yank-0.2.1/ChangeLog
+--- yank-0.2.1.orig/ChangeLog	Sat Oct 13 13:57:19 2001
++++ yank-0.2.1/ChangeLog	Sat Dec  1 13:40:04 2001
+@@ -1,3 +1,9 @@
++2001-12-01  Michal Kochanowicz <mkochano@pld.org.pl>
++
++	* src/Plugins/GtkSpell/gtkspell.c (make_menu): bugfix: removed loop
++	from created submenu with "Other Possibilites...". It was a reason of
++	segmentation fault.
++
+ 2001-10-13  Michael Hussmann  <m.hussmann@home.ins.de>
+ 
+ 	* src/callbacks.c (free_note): bugfix
 diff -urN yank-0.2.1.orig/src/Plugins/GtkSpell/gtkspell.c yank-0.2.1/src/Plugins/GtkSpell/gtkspell.c
 --- yank-0.2.1.orig/src/Plugins/GtkSpell/gtkspell.c	Sat Mar 10 18:02:46 2001
-+++ yank-0.2.1/src/Plugins/GtkSpell/gtkspell.c	Tue Nov 27 18:37:02 2001
++++ yank-0.2.1/src/Plugins/GtkSpell/gtkspell.c	Sat Dec  1 13:31:19 2001
 @@ -466,11 +466,11 @@
  			do {
  				if (l->data == NULL && l->next != NULL) {
