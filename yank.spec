@@ -5,8 +5,6 @@ Version:	0.2.1
 Release:	2
 License:	GPL
 Group:		X11/Applications
-Group(de):	X11/Applikationen
-Group(pl):	X11/Aplikacje
 Source0:	http://download.sourceforge.net/yank/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-gconf_install.patch
 Patch1:		%{name}-gtkspell_menu.patch
