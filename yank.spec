@@ -103,7 +103,7 @@ CFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOTP%{_sysconfdir}/gconf
+install -d $RPM_BUILD_ROOT%{_sysconfdir}/gconf
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
