@@ -2,7 +2,7 @@ Summary:	Yet another note-keeper (GNOME)
 Summary(pl):	Jeszcze jeden notatnik
 Name:		yank
 Version:	0.2.0
-Release:	3
+Release:	4
 License:	GPL
 Group:		X11/Applications
 Group(de):	X11/Applikationen
@@ -32,6 +32,8 @@ fool-proof, irritating and wasting too much memory.
 %patch -p1
 
 %build
+rm -f missing
+libtoolize --copy --force
 gettextize --copy --force
 aclocal
 autoconf
