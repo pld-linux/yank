@@ -1,7 +1,7 @@
 Summary:	yet another note-keeper (GNOME)
 Name:		yank
 Version:	0.1.3
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Utilities
 Group(pl):	X11/Narzêdzia
@@ -34,7 +34,7 @@ rm -rf $RPM_BUILD_ROOT
 
 make install \
 	DESTDIR=$RPM_BUILD_ROOT \
-	Applicationsdir=%{_applnkdir}/Applications
+	Applicationsdir=%{_applnkdir}/Office/PIMs
 
 gzip -9nf AUTHORS ChangeLog NEWS README THANKS TODO
 
@@ -48,4 +48,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc *.gz
 %attr(755,root,root) %{_bindir}/yank
 %{_datadir}/pixmaps/yank.png
-%{_applnkdir}/Applications/yank.desktop
+%{_applnkdir}/Office/PIMs/yank.desktop
