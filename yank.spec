@@ -8,7 +8,7 @@ Group(pl):	X11/Narzêdzia
 Source0:	http://home.ins.de/~m.hussmann/software/yank/%{name}-%{version}.tar.bz2
 URL:		http://home.ins.de/~m.hussmann/software/yank/index.html
 BuildRequires:	gettext-devel
-BuildRoot:	/tmp/%{name}-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 %define		_mandir		%{_prefix}/man
