@@ -1,16 +1,20 @@
-Summary:	yet another note-keeper (GNOME)
+Summary:	Yet another note-keeper (GNOME)
+Summary(pl):	Jeszcze jeden notatnik
 Name:		yank
-Version:	0.1.5
-Release:	3
+Version:	0.2.0
+Release:	1
 License:	GPL
 Group:		X11/Applications
 Group(de):	X11/Applikationen
 Group(pl):	X11/Aplikacje
 Source0:	ftp://yank.sourceforge.net/pub/yank/%{name}-%{version}.tar.bz2
+Patch0:		yank-plugun_dir.patch
 URL:		http://yank.sourceforge.net/
+BuildRequires:	gdk-pixbuf-devel
 BuildRequires:	gettext-devel
 BuildRequires:	gnome-libs-devel
-BuildRequires:	gnome-print-devel >= 0.20
+BuildRequires:	gnome-print-devel >= 0.24
+BuildRequires:	libxml-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -25,10 +29,15 @@ fool-proof, irritating and wasting too much memory.
 
 %prep
 %setup -q
+%patch -p1
 
 %build
 gettextize --copy --force
-%configure
+aclocal
+autoconf
+automake -a -c
+%configure \
+	--disable-static
 %{__make}
 
 %install
@@ -49,5 +58,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc *.gz
 %attr(755,root,root) %{_bindir}/yank
+%dir %{_libdir}/yank
+%attr(755,root,root) %{_libdir}/yank/*.so*
 %{_pixmapsdir}/yank.png
 %{_applnkdir}/Office/PIMs/yank.desktop
