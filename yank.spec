@@ -14,11 +14,11 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_mandir		%{_prefix}/man
 
 %description
-Yank is a simple notekeer and todo-list manager using the gnome and gtk
-libraries. It feels stable and usable enough to be released to the public
-but it surely lacks some (not so important) features which might be added
-later. Excessive tests have shown that yank is fool-proof, irritating and
-wasting too much memory.
+Yank is a simple notekeer and todo-list manager using the gnome and
+gtk libraries. It feels stable and usable enough to be released to the
+public but it surely lacks some (not so important) features which
+might be added later. Excessive tests have shown that yank is
+fool-proof, irritating and wasting too much memory.
 
 %prep
 %setup -q
