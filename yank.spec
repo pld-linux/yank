@@ -1,7 +1,7 @@
 Summary:	yet another note-keeper (GNOME)
 Name:		yank
-Version:	0.1.3
-Release:	2
+Version:	0.1.4
+Release:	1
 License:	GPL
 Group:		X11/Utilities
 Group(pl):	X11/Narzêdzia
