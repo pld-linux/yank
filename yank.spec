@@ -5,7 +5,7 @@ Version:	0.2.1
 Release:	6
 License:	GPL
 Group:		X11/Applications
-Source0:	http://download.sourceforge.net/yank/%{name}-%{version}.tar.bz2
+Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 # Source0-md5:	e490f4be72a6e3728d0eed8a03bd4c55
 Source1:	%{name}.png
 Patch0:		%{name}-gconf_install.patch
