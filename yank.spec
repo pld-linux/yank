@@ -2,13 +2,15 @@ Summary:	Yet another note-keeper (GNOME)
 Summary(pl):	Jeszcze jeden notatnik
 Name:		yank
 Version:	0.2.1
-Release:	5
+Release:	6
 License:	GPL
 Group:		X11/Applications
 Source0:	http://download.sourceforge.net/yank/%{name}-%{version}.tar.bz2
+Source1:	%{name}.png
 Patch0:		%{name}-gconf_install.patch
 Patch1:		%{name}-gtkspell_menu.patch
 Patch2:		%{name}-build_spell_pligin_conditionaly.patch
+Patch3:		%{name}-desktop.patch
 URL:		http://yank.sourceforge.net/
 BuildRequires:	GConf-devel
 BuildRequires:	autoconf
@@ -81,6 +83,9 @@ Wtyczka sprawdzaj±ca pisowniê.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
+
+install %{SOURCE1} pixmaps
 
 %build
 rm -f aux/missing
@@ -98,7 +103,7 @@ CFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_sysconfdir}/gconf
+install -d $RPM_BUILD_ROOTP%{_sysconfdir}/gconf
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
