@@ -1,0 +1,12 @@
+--- yank-0.2.1/yank.desktop~	Sun Nov 17 00:56:33 2002
++++ yank-0.2.1/yank.desktop	Sun Nov 17 00:55:40 2002
+@@ -3,7 +3,8 @@
+ Name[de]=yank
+ Comment=Yet another NoteKeeper
+ Comment[de]=Yet another NoteKeeper
++Comment[pl]=Jeszcze jeden notatnik
+ Exec=yank
+-Icon=
++Icon=yank.png
+ Terminal=0
+ Type=Application
