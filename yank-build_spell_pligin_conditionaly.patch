@@ -1,0 +1,22 @@
+--- yank-0.2.1/configure.in~	Tue Dec  4 10:56:11 2001
++++ yank-0.2.1/configure.in	Tue Dec  4 10:56:11 2001
+@@ -257,16 +257,9 @@
+ dnl -                     [a|i]spell                       -
+ dnl --------------------------------------------------------
+ 
+-GTKSPELL_SUBDIR=""
+-gtkspell_plugin="no"
+-AC_PATH_PROG(ispell_path, aspell)
+-AC_PATH_PROG(aspell_path, ispell)
+-AC_MSG_CHECKING(gtkspell plugin)
+-if test "x${ispell_path}${aspell_path}" != "x" ; then
+-	GTKSPELL_SUBDIR="GtkSpell"
+-	gtkspell_plugin="yes"
+-fi
++GTKSPELL_SUBDIR=""; gtkspell_plugin="no"
+-AC_MSG_RESULT($gtkspell_plugin)
++AC_ARG_ENABLE(spell-plugin, [  --enable-spell-plugin   build aspell/ispell plugin  [default=no]],
++	[GTKSPELL_SUBDIR="GtkSpell"; gtkspell_plugin="yes"])
+ AC_SUBST(GTKSPELL_SUBDIR)
+ 
+ dnl --------------------------------------------------------
