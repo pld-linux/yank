@@ -5,8 +5,8 @@ Release:	1
 License:	GPL
 Group:		X11/Utilities
 Group(pl):	X11/Narzêdzia
-Source0:	http://home.ins.de/~m.hussmann/software/yank/%{name}-%{version}.tar.bz2
-URL:		http://home.ins.de/~m.hussmann/software/yank/index.html
+Source0:	ftp://yank.sourceforge.net/pub/yank/%{name}-%{version}.tar.bz2
+URL:		http://yank.sourceforge.net/
 BuildRequires:	gettext-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
