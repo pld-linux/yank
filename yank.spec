@@ -85,7 +85,7 @@ Wtyczka sprawdzaj±ca pisowniê.
 %build
 rm -f aux/missing
 %{__libtoolize}
-gettextize --copy --force
+%{__gettextize}
 aclocal
 %{__autoconf}
 %{__automake}
