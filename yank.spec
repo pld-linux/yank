@@ -116,7 +116,8 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/yank/plugins/%{version}
 %dir %{_libdir}/yank/plugins
 %dir %{_libdir}/yank
-%{_sysconfdir}/*/*/*
+%{_sysconfdir}/gconf/gconf.xml.defaults/apps/yank
+%{_sysconfdir}/gconf/gconf.xml.defaults/schemas/apps/yank
 %{_pixmapsdir}/yank.png
 %{_applnkdir}/Office/PIMs/yank.desktop
 
