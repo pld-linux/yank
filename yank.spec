@@ -1,10 +1,11 @@
 Summary:	yet another note-keeper (GNOME)
 Name:		yank
-Version:	0.1.4
+Version:	0.1.5
 Release:	1
 License:	GPL
-Group:		X11/Utilities
-Group(pl):	X11/Narzêdzia
+Group:		X11/Applications
+Group(de):	X11/Applikationen
+Group(pl):	X11/Aplikacje
 Source0:	ftp://yank.sourceforge.net/pub/yank/%{name}-%{version}.tar.bz2
 URL:		http://yank.sourceforge.net/
 BuildRequires:	gettext-devel
@@ -25,7 +26,6 @@ fool-proof, irritating and wasting too much memory.
 
 %build
 gettextize --copy --force
-LDFLAGS="-s"; export LDFLAGS
 %configure
 %{__make}
 
