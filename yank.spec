@@ -39,8 +39,8 @@ might be added later. Excessive tests have shown that yank is
 fool-proof, irritating and wasting too much memory.
 
 %description -l pl
-Yank jest prostym notatnikiem i menad¿erem listy rzeczy do zrobienia,
-u¿ywaj±cym bibliotek GNOME i gtk+.
+Yank jest prostym notatnikiem i programem do zarz±dzania osobist±
+list± zadañ, korzystaj±cym z bibliotek GNOME i gtk+.
 
 %package gpg
 Summary:	GPG plugin
