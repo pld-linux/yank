@@ -2,7 +2,7 @@ Summary:	Yet another note-keeper (GNOME)
 Summary(pl):	Jeszcze jeden notatnik
 Name:		yank
 Version:	0.2.1
-Release:	4
+Release:	5
 License:	GPL
 Group:		X11/Applications
 Source0:	http://download.sourceforge.net/yank/%{name}-%{version}.tar.bz2
@@ -86,7 +86,7 @@ Wtyczka sprawdzaj±ca pisowniê.
 rm -f aux/missing
 %{__libtoolize}
 %{__gettextize}
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 
