@@ -1,0 +1,12 @@
+diff -urN yank-0.2.1.orig/src/Makefile.am yank-0.2.1/src/Makefile.am
+--- yank-0.2.1.orig/src/Makefile.am	Wed Oct 10 08:01:39 2001
++++ yank-0.2.1/src/Makefile.am	Tue Nov 27 17:33:05 2001
+@@ -50,7 +50,7 @@
+ 
+ install-data-local:
+ 	gconftool --shutdown
+-	GCONF_CONFIG_SOURCE="xml::${sysconfdir}/gconf/gconf.xml.defaults" \
++	GCONF_CONFIG_SOURCE="xml::$(DESTDIR)/${sysconfdir}/gconf/gconf.xml.defaults" \
+ 	gconftool --makefile-install-rule $(top_srcdir)/src/$(schemas__DATA)
+ 
+ EXTRA_DIST = $(schemas__DATA) $(GDDNOTES_DIST)
