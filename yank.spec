@@ -1,48 +1,51 @@
-Summary: yet another note-keeper (GNOME)
-Name: yank
-%define version		@VERSION@
-%define rel		1
-%define prefix		/usr
-Version: %{version}
-Release: %{rel}
-Copyright: GPL
-Packager: Thomas Schultz <tststs@gmx.de>
-URL: http://home.ins.de/%7Em.hussmann/software/yank/index.html
-Group: X11/Utilities
-Source: %{name}-%{version}.tar.gz
-BuildRoot: /var/tmp/%{name}-%{version}-root
+Summary:	yet another note-keeper (GNOME)
+Name:		yank
+Version:	0.1.3
+Release:	1
+License:	GPL
+Group:		X11/Utilities
+Group(pl):	X11/Narzêdzia
+Source0:	http://home.ins.de/~m.hussmann/software/yank/%{name}-%{version}.tar.bz2
+URL:		http://home.ins.de/~m.hussmann/software/yank/index.html
+BuildRequires:	gettext-devel
+BuildRoot:	/tmp/%{name}-%{version}-root-%(id -u -n)
+
+%define		_prefix		/usr/X11R6
+%define		_mandir		%{_prefix}/man
 
 %description
 Yank is a simple notekeer and todo-list manager using the gnome and gtk
 libraries. It feels stable and usable enough to be released to the public
 but it surely lacks some (not so important) features which might be added
 later. Excessive tests have shown that yank is fool-proof, irritating and
-wasting too much memory. ;)
-
-%changelog
-* Tue Mar 28 2000 Thomas Schultz <tststs@gmx.de>
-- First release of .spec file
+wasting too much memory.
 
 %prep
-%setup
+%setup -q
 
 %build
-./configure --prefix=%prefix
-make RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
-strip src/yank
+gettextize --copy --force
+LDFLAGS="-s"; export LDFLAGS
+%configure
+make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-mkdir -p $RPM_BUILD_ROOT/usr/bin
-make prefix=$RPM_BUILD_ROOT%{prefix} install
+
+make install \
+	DESTDIR=$RPM_BUILD_ROOT \
+	Applicationsdir=%{_applnkdir}/Applications
+
+gzip -9nf AUTHORS ChangeLog NEWS README THANKS TODO
+
+%find_lang %{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
-%defattr(-,root,root)
-%doc ABOUT-NLS AUTHORS ChangeLog COPYING NEWS README THANKS TODO
-%{prefix}/bin/yank
-%{prefix}/share/pixmaps/yank.png
-%{prefix}/share/locale/*/*/*
-%{prefix}/share/gnome/apps/Applications/yank.desktop
+%files -f %{name}.lang
+%defattr(644,root,root,755)
+%doc *.gz
+%attr(755,root,root) %{_bindir}/yank
+%{_datadir}/pixmaps/yank.png
+%{_applnkdir}/Applications/yank.desktop
