@@ -49,5 +49,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc *.gz
 %attr(755,root,root) %{_bindir}/yank
-%{_datadir}/pixmaps/yank.png
+%{_pixmapsdir}/yank.png
 %{_applnkdir}/Office/PIMs/yank.desktop
