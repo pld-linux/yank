@@ -1,0 +1,2 @@
+- updated to 0.2.0,
+- added plugun_dir patch which changes plugin dir to %{_libdir}/yank.
