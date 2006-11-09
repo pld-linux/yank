@@ -1,0 +1,2 @@
+- fixed %files
+  NOTE: still segfault when Settings/Preferences are choosen
