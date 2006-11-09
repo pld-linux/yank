@@ -1,0 +1,11 @@
+- Release 1.
+- Updated to 0.2.1.
+- Fixed source URI.
+- Sorted and complete BuildRequires.
+- Added subpackages with plugins (gpg, pgp5 and gtkspell).
+- Removed obsolete plugin_dir patch.
+- Added gconf_install patch (I'm not sure if it is OK).
+- Added gtkspell_menu patch which fixes SEGV when displaying menu with
+  "Other Possibilities".
+  NOTE: I don't know how gconf works and it is possible that installation
+  of gconf files is screwed.
