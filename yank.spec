@@ -5,7 +5,7 @@ Version:	0.2.1
 Release:	6
 License:	GPL
 Group:		X11/Applications
-Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
+Source0:	http://dl.sourceforge.net/yank/%{name}-%{version}.tar.bz2
 # Source0-md5:	e490f4be72a6e3728d0eed8a03bd4c55
 Source1:	%{name}.png
 Patch0:		%{name}-gconf_install.patch
@@ -32,8 +32,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Yank is a simple notekeer and todo-list manager using the GNOME and
-GTK+ libraries. It feels stable and usable enough to be released to the
-public but it surely lacks some (not so important) features which
+GTK+ libraries. It feels stable and usable enough to be released to
+the public but it surely lacks some (not so important) features which
 might be added later. Excessive tests have shown that yank is
 fool-proof, irritating and wasting too much memory.
 
@@ -45,7 +45,7 @@ list± zadañ, korzystaj±cym z bibliotek GNOME i GTK+.
 Summary:	GPG plugin
 Summary(pl):	Wtyczka GPG
 Group:		X11/Applications
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description gpg
 GPG plugin.
@@ -57,7 +57,7 @@ Wtyczka GPG.
 Summary:	PGP5 plugin
 Summary(pl):	Wtyczka PGP5
 Group:		X11/Applications
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description pgp5
 PGP5 plugin.
@@ -69,7 +69,7 @@ Wtyczka PGP5.
 Summary:	Spellchecker plugin
 Summary(pl):	Wtyczka sprawdzaj±ca pisowniê
 Group:		X11/Applications
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description gtkspell
 Spellchecker plugin.
