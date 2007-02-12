@@ -1,5 +1,5 @@
 Summary:	Yet another note-keeper (GNOME)
-Summary(pl):	Jeszcze jeden notatnik
+Summary(pl.UTF-8):   Jeszcze jeden notatnik
 Name:		yank
 Version:	0.2.1
 Release:	6
@@ -37,45 +37,45 @@ the public but it surely lacks some (not so important) features which
 might be added later. Excessive tests have shown that yank is
 fool-proof, irritating and wasting too much memory.
 
-%description -l pl
-Yank jest prostym notatnikiem i programem do zarz±dzania osobist±
-list± zadañ, korzystaj±cym z bibliotek GNOME i GTK+.
+%description -l pl.UTF-8
+Yank jest prostym notatnikiem i programem do zarzÄ…dzania osobistÄ…
+listÄ… zadaÅ„, korzystajÄ…cym z bibliotek GNOME i GTK+.
 
 %package gpg
 Summary:	GPG plugin
-Summary(pl):	Wtyczka GPG
+Summary(pl.UTF-8):   Wtyczka GPG
 Group:		X11/Applications
 Requires:	%{name} = %{version}-%{release}
 
 %description gpg
 GPG plugin.
 
-%description gpg -l pl
+%description gpg -l pl.UTF-8
 Wtyczka GPG.
 
 %package pgp5
 Summary:	PGP5 plugin
-Summary(pl):	Wtyczka PGP5
+Summary(pl.UTF-8):   Wtyczka PGP5
 Group:		X11/Applications
 Requires:	%{name} = %{version}-%{release}
 
 %description pgp5
 PGP5 plugin.
 
-%description pgp5 -l pl
+%description pgp5 -l pl.UTF-8
 Wtyczka PGP5.
 
 %package gtkspell
 Summary:	Spellchecker plugin
-Summary(pl):	Wtyczka sprawdzaj±ca pisowniê
+Summary(pl.UTF-8):   Wtyczka sprawdzajÄ…ca pisowniÄ™
 Group:		X11/Applications
 Requires:	%{name} = %{version}-%{release}
 
 %description gtkspell
 Spellchecker plugin.
 
-%description gtkspell -l pl
-Wtyczka sprawdzaj±ca pisowniê.
+%description gtkspell -l pl.UTF-8
+Wtyczka sprawdzajÄ…ca pisowniÄ™.
 
 %prep
 %setup -q
