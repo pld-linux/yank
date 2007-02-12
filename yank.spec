@@ -1,5 +1,5 @@
 Summary:	Yet another note-keeper (GNOME)
-Summary(pl.UTF-8):   Jeszcze jeden notatnik
+Summary(pl.UTF-8):	Jeszcze jeden notatnik
 Name:		yank
 Version:	0.2.1
 Release:	6
@@ -43,7 +43,7 @@ listą zadań, korzystającym z bibliotek GNOME i GTK+.
 
 %package gpg
 Summary:	GPG plugin
-Summary(pl.UTF-8):   Wtyczka GPG
+Summary(pl.UTF-8):	Wtyczka GPG
 Group:		X11/Applications
 Requires:	%{name} = %{version}-%{release}
 
@@ -55,7 +55,7 @@ Wtyczka GPG.
 
 %package pgp5
 Summary:	PGP5 plugin
-Summary(pl.UTF-8):   Wtyczka PGP5
+Summary(pl.UTF-8):	Wtyczka PGP5
 Group:		X11/Applications
 Requires:	%{name} = %{version}-%{release}
 
@@ -67,7 +67,7 @@ Wtyczka PGP5.
 
 %package gtkspell
 Summary:	Spellchecker plugin
-Summary(pl.UTF-8):   Wtyczka sprawdzająca pisownię
+Summary(pl.UTF-8):	Wtyczka sprawdzająca pisownię
 Group:		X11/Applications
 Requires:	%{name} = %{version}-%{release}
 
